@@ -13,7 +13,10 @@ public class HomeDAOImpl implements HomeDAO {
 	@Override
 	public String info() {
 		// TODO Auto-generated method stub
-		return "hello";
+		String name = "하나";
+		String result = session.selectOne("info.selectGrade", name); // selectOne(mapper의 select id, String 이름)
+		
+		return result;
 	}
 										
 }
